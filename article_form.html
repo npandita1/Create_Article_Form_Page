@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Article</title>
+
+    <link rel="stylesheet" type="text/css" href="article_form_style.css">
+</head>
+<body>
+    <div class="flex-container">
+
+        <h2 class="page-heading">Let's Create a new Article</h2>
+
+        <h4 class="page-heading">What's on your mind today?</h4>
+
+        <form class="create-article-form" action="" method="post">
+
+            <div>
+                <label class="form-label">Title:</label><br/>
+                <input class="form-input" type="text" placeholder="Article Name" required minlength="4" onchange="validateTitle()"><br/>
+            </div>
+
+            <div>
+                <label class="form-label">Description/Content:</label><br/>
+                <textarea class="form-input" placeholder="Article Content" required minlength="10" onchange="validateContent()"></textarea><br/>
+            </div>
+
+            <div>
+                <label class="form-label">Username:</label><br/>
+                <input class="form-input" type="text" placeholder="Unique Username" required minlength="2" onchange="validateUser()"><br/> 
+            </div>   
+
+            <div>
+                <label class="form-label">Author Name:</label><br/>
+                <input class="form-input" type="text" placeholder="Article Author" required minlength="3" onchange="validateName()"><br/> 
+            </div>
+            
+            <div>
+                <label class="form-label">Author Email:</label><br/>
+                <input class="form-input" type="email" placeholder="Article Author Email" required onchange="validateEmail()"><br/>
+            </div>
+
+            <div>
+                <label class="form-label">Phone Number:</label><br/>
+                <input class="form-input" type="tel" id="phone-number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
+            </div>
+
+            <div><hr id="divider-for-form-and-button"></div>
+
+            <div> <input class= "form-button" type="submit" value="Submit" onclick="showPopup()"> </div> <br/>
+
+        </form>
+    </div>
+
+    <script src="article_form_control.js"></script>
+</body>
+</html>

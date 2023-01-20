@@ -1,0 +1,70 @@
+body {
+    background-image: url(/Users/npandit1/Downloads/annie-spratt-FSFfEQkd1sc-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container { 
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px solid #a4a4a4;
+    border-top: 40px solid #a4a4a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vh; 
+    padding-top: 4vh;
+    padding-left: 20vh;
+    padding-right: 20vh;
+}
+
+h2 {
+    font-family: Inter-Bold,sans-serif;
+    font-size: 5vh;
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+h4 {
+    font-family: Inter-Bold,sans-serif;
+    font-size: 3vh;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+create-article-form {
+    padding: 50px;
+}
+
+.form-label {
+    font-family: Inter-SemiBold,sans-serif;
+    font-size: 1.7vh;
+}
+
+.form-input {
+    font-size: 1.6vh;
+    width: 60vh;
+    padding: 0.6vh 1.1vh;
+    border: 0.2vh solid #dee2e6;
+    box-sizing: border-box;
+    margin-top: 0.5vh;
+    border-radius: 0.2vh;
+    height: 4vh;
+    margin-bottom: 1vh;
+}
+
+.form-button {
+    margin-top: 1vh;
+    background-color: #9a9a9a;
+    font-size: 1.7vh;
+    padding: 1vh 0vh;
+    width: 100%;
+    border-style: none;
+    padding: 1.4vh 0vh;
+    color: white;
+    height: 5.6vh;
+    cursor: pointer;
+}
