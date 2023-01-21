@@ -4,52 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Article</title>
+    <title>Create New Article</title>
 
     <link rel="stylesheet" type="text/css" href="article_form_style.css">
 </head>
 <body>
     <div class="flex-container">
 
-        <h2 class="page-heading">Let's Create a new Article</h2>
+        <h2 class="page-heading-main">Let's Create a new Article</h2>
 
-        <h4 class="page-heading">What's on your mind today?</h4>
+        <h4 class="page-heading-secondary">What's on your mind today?</h4>
 
         <form class="create-article-form" action="" method="post">
 
             <div>
                 <label class="form-label">Title:</label><br/>
-                <input class="form-input" type="text" placeholder="Article Name" required minlength="4" onchange="validateTitle()"><br/>
+                <input class="form-input" id="title" type="text" placeholder="Article Name" required onchange="validateTitle()"><br/>
+                <p class="error" id="title-error"></p>
             </div>
 
             <div>
                 <label class="form-label">Description/Content:</label><br/>
-                <textarea class="form-input" placeholder="Article Content" required minlength="10" onchange="validateContent()"></textarea><br/>
+                <textarea class="form-input" id="content" placeholder="Article Content" required onchange="validateContent()"></textarea><br/>
+                <p class="error" id="content-error"></p>
             </div>
 
             <div>
                 <label class="form-label">Username:</label><br/>
-                <input class="form-input" type="text" placeholder="Unique Username" required minlength="2" onchange="validateUser()"><br/> 
+                <input class="form-input" id="user" type="text" placeholder="Unique Username" required onchange="validateUser()"><br/> 
+                <p class="error" id="user-error"></p>
             </div>   
 
             <div>
                 <label class="form-label">Author Name:</label><br/>
-                <input class="form-input" type="text" placeholder="Article Author" required minlength="3" onchange="validateName()"><br/> 
+                <input class="form-input" id="name" type="text" placeholder="Article Author" required onchange="validateName()"><br/> 
+                <p class="error" id="name-error"></p>
             </div>
             
             <div>
                 <label class="form-label">Author Email:</label><br/>
-                <input class="form-input" type="email" placeholder="Article Author Email" required onchange="validateEmail()"><br/>
+                <input class="form-input" id="email" type="email" placeholder="Article Author Email" required onchange="validateEmail()"><br/>
+                <p class="error" id="email-error"></p>
             </div>
 
             <div>
                 <label class="form-label">Phone Number:</label><br/>
-                <input class="form-input" type="tel" id="phone-number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
+                <input class="form-input" type="tel" id="number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
+                <p class="error" id="number-error"></p>
             </div>
 
             <div><hr id="divider-for-form-and-button"></div>
 
-            <div> <input class= "form-button" type="submit" value="Submit" onclick="showPopup()"> </div> <br/>
+            <div> <input id="btn-submit" class= "form-button" type="submit" value="Submit" onclick="showPopup()" disabled="disabled"> </div> <br/>
 
         </form>
     </div>

@@ -9,8 +9,8 @@ body {
 
 .flex-container { 
     background-color: rgba(255, 255, 255, 0.9);
-    border: 5px solid #a4a4a4;
-    border-top: 40px solid #a4a4a4;
+    border: 5px solid burlywood;
+    border-top: 40px solid burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +21,14 @@ body {
     padding-right: 20vh;
 }
 
-h2 {
+.page-heading-main {
     font-family: Inter-Bold,sans-serif;
     font-size: 5vh;
     margin-bottom: 10px;
     margin-top: 1px;
 }
 
-h4 {
+.page-heading-secondary {
     font-family: Inter-Bold,sans-serif;
     font-size: 3vh;
     margin-bottom: 30px;
@@ -56,9 +56,9 @@ create-article-form {
     margin-bottom: 1vh;
 }
 
-.form-button {
+.form-button:disabled {
     margin-top: 1vh;
-    background-color: #9a9a9a;
+    background-color: #a4a4a4;
     font-size: 1.7vh;
     padding: 1vh 0vh;
     width: 100%;
@@ -67,4 +67,26 @@ create-article-form {
     color: white;
     height: 5.6vh;
     cursor: pointer;
+}
+
+.form-button {
+    margin-top: 1vh;
+    background-color: burlywood;
+    font-size: 1.7vh;
+    padding: 1vh 0vh;
+    width: 100%;
+    border-style: none;
+    padding: 1.4vh 0vh;
+    color: white;
+    height: 5.6vh;
+    cursor: pointer;
+}
+
+.error {
+    display: none;
+    color: red;
+    background-color: rgba(255, 99, 71, 0.4);
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding: 8px;
 }
