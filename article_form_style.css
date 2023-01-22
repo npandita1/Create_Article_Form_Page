@@ -123,3 +123,15 @@ create-article-form {
 #text {
     font-size: 3vh;
 }
+
+#country {
+    width: 15%;
+}
+
+#number {
+    width: 100%;
+}
+
+.number {
+    display: flex;
+}

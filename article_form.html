@@ -49,8 +49,20 @@
 
             <div>
                 <label class="form-label">Phone Number:</label><br/>
-                <input class="form-input" type="tel" id="number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
-                <p class="error" id="number-error"></p>
+                <div class="number">
+                    <select class="form-input" id="country">
+                        <option value="+91">+91</option>
+                        <option value="+92">+92</option>
+                        <option value="+44">+44</option>
+                        <option value="+1">+1</option>
+                        <option value="+81">+81</option>
+                        <option value="+20">+20</option>
+                        <option value="+65">+65</option>
+                        <option value="+60">+60</option>
+                    </select>
+                    <input class="form-input" type="tel" id="number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
+                    <p class="error" id="number-error"></p>
+                </div>
             </div>
 
             <div><hr id="divider-for-form-and-button"></div>
