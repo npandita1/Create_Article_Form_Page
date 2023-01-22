@@ -55,7 +55,19 @@
 
             <div><hr id="divider-for-form-and-button"></div>
 
-            <div> <input id="btn-submit" class= "form-button" type="submit" value="Submit" onclick="showPopup()" disabled="disabled"> </div> <br/>
+            <div class="confirm-container" id="popup">
+                <div class="popup-box">
+                    <p id="text"> Are you sure you want to submit your Article? </p><br/>
+                    <span>
+                        <input class= "form-button" id="btn-submit" type="submit" value="Submit">
+                    </span>
+                    <span>
+                        <input class= "form-button" id="btn-cancel" type="button" value="Cancel" onclick="closePopup()">
+                    </span>
+                </div>
+            </div>
+
+            <div> <input id="btn" class= "form-button" type="button" value="Submit" onclick="showPopup()" disabled > </div> <br/>
 
         </form>
     </div>

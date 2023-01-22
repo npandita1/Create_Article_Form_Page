@@ -1,6 +1,12 @@
 let regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let regPhone = /^\d{10}$/;
 let regName = /^[A-Za-z\s]+$/;
+let validTitle = false;
+let validContent = false;
+let validUser = false;
+let validName = false;
+let validEmail = false;
+let validNumber = false;
 
 function validateTitle() {
     let title = getTitle();
@@ -12,12 +18,12 @@ function validateTitle() {
     }
     document.getElementById("title-error").style.display = "none";
     title.style.border = "0.2vh solid #dee2e6";
-    return true;
+    validTitle = true;
+    enableButton();
 }
 
 function getTitle() {
     return document.getElementById('title');
-
 }
 
 function validateContent() {
@@ -30,7 +36,8 @@ function validateContent() {
     }
     document.getElementById("content-error").style.display = "none";
     content.style.border = "0.2vh solid #dee2e6";
-    return true;
+    validContent = true;
+    enableButton();
 }
 
 function getContent() {
@@ -43,12 +50,13 @@ function validateUser() {
     if (username.includes(user.value)) {
         document.getElementById("user-error").style.display = "none";
         user.style.border = "0.2vh solid #dee2e6";
+        validUser = true;
+        enableButton();
         return true;
     }
     document.getElementById("user-error").innerHTML = "Please enter a valid Content";
     document.getElementById("user-error").style.display = "block";
     user.style.border = "0.2vh solid red";
-    return false;
 }
 
 function getUser() {
@@ -65,7 +73,8 @@ function validateName() {
     }
     document.getElementById("name-error").style.display = "none";
     name.style.border = "0.2vh solid #dee2e6";
-    return true;
+    validName = true;
+    enableButton();
 }
 
 function getName() {
@@ -82,7 +91,8 @@ function validateEmail() {
     }
     document.getElementById("email-error").style.display = "none";
     email.style.border = "0.2vh solid #dee2e6";
-    return true;
+    validEmail = true;
+    enableButton();
 }
 
 function getEmail() {
@@ -99,14 +109,35 @@ function validateNumber() {
     }
     document.getElementById("number-error").style.display = "none";
     number.style.border = "0.2vh solid #dee2e6";
-    return true;
+    validNumber = true;
+    enableButton();
 }
 
 function getNumber() {
     return document.getElementById('number');
 }
 
-function showPopup() {
-
+function enableButton() {
+    let button = getButton();
+    if (validTitle && validContent && validUser && validName && validEmail && validNumber) {
+        button.disabled = false;
+    }
 }
 
+function getButton() {
+    return document.getElementById('btn');
+}
+
+function showPopup() {
+    let popup = getPopupBox();
+    popup.classList.add("show-confirm-container");
+}
+
+function closePopup() {
+    let popup = getPopupBox();
+    popup.classList.remove("show-confirm-container");
+}
+
+function getPopupBox() {
+    return document.getElementById('popup');
+}
