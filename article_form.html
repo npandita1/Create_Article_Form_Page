@@ -60,7 +60,7 @@
                         <option value="+65">+65</option>
                         <option value="+60">+60</option>
                     </select>
-                    <input class="form-input" type="tel" id="number" placeholder="Author's Contact Number" required minlength="10" maxlength="10" onchange="validateNumber()"><br/> 
+                    <input class="form-input" type="tel" id="number" placeholder="Author's Contact Number" required maxlength="10" onchange="validateNumber()"><br/> 
                     <p class="error" id="number-error"></p>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div class="popup-box">
                     <p id="text"> Are you sure you want to submit your Article? </p><br/>
                     <span>
-                        <input class= "form-button" id="btn-submit" type="submit" value="Submit">
+                        <input class= "form-button" id="btn-submit" type="button" value="Submit" onclick="showThank()">
                     </span>
                     <span>
                         <input class= "form-button" id="btn-cancel" type="button" value="Cancel" onclick="closePopup()">
@@ -79,9 +79,17 @@
                 </div>
             </div>
 
+            <div class="submit-container" id="submitmessage">
+                <div class="submit-message">
+                    <p id="message">Your Article has been Submitted.</p>
+                    <button class="form-button" type="submit" onclick="closeThank()">OK!</button>
+                </div>
+            </div>
+
             <div> <input id="btn" class= "form-button" type="button" value="Submit" onclick="showPopup()" disabled > </div> <br/>
 
         </form>
+
     </div>
 
     <script src="article_form_control.js"></script>

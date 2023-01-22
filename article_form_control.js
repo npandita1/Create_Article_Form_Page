@@ -141,3 +141,17 @@ function closePopup() {
 function getPopupBox() {
     return document.getElementById('popup');
 }
+
+function showThank() {
+    let message = getThank();
+    message.classList.add("show-submit-container");
+}
+
+function closeThank() {
+    let message = getThank();
+    message.classList.remove("show-submit-container");
+}
+
+function getThank() {
+    return document.getElementById('submitmessage');
+}

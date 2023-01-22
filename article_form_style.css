@@ -135,3 +135,36 @@ create-article-form {
 .number {
     display: flex;
 }
+
+.submit-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-submit-container {
+    visibility: visible;
+}
+
+.submit-message {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px solid saddlebrown;
+    border-top: 40px solid saddlebrown;
+    padding-bottom: 5vh; 
+    padding-top: 4vh;
+    padding-left: 20vh;
+    padding-right: 20vh;
+}
+
+#message {
+    font-size: 3vh;
+}
