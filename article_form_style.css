@@ -167,4 +167,13 @@ create-article-form {
 
 #message {
     font-size: 3vh;
+    margin-top: 1px;
+}
+
+#submit-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 1px;
+    margin-left: 95px;
 }
